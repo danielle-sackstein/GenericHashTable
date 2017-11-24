@@ -1,7 +1,9 @@
 #include "MyIntFunctions.h"
 
 void* cloneInt(const void* i)
-{}
+{
+    return 0;
+}
 
 void freeInt( void* i){}
 

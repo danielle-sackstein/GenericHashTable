@@ -12,6 +12,7 @@ int strFcn (const void*  s, size_t tableSize)
 {
     return 0;
 }
+
 void strPrint (const void*  s)
 {}
 

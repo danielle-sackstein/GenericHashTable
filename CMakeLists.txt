@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 project(GenericHashTable)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_FLAGS "-Wextra -Wall -Wvla -std=c99 -Wno-unused-parameter")
 
 set(SOURCE_FILES
         GenericHashTable.h
