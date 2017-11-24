@@ -4,7 +4,8 @@
 /*! This is TableErrors enum  */
 typedef enum 
 {
-	MEM_OUT, /*!< this is out of memory */ 
+	MEM_OUT, /*!< this is out of memory */
+	INVALID_ARGUMENT,
 	GENERAL_ERROR /*!< this is general error */
 	
 } TableErrors;

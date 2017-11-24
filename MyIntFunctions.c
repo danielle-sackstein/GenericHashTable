@@ -1,15 +1,43 @@
 #include "MyIntFunctions.h"
+#include "TableErrorHandle.h"
 
 void* cloneInt(const void* i)
 {
-    return 0;
+    if (i == NULL) {
+        reportError(INVALID_ARGUMENT);
+        return NULL;
+    }
+
+    int* newKey = (int*) malloc (sizeof(int));
+    if (newKey == NULL) {
+        reportError(MEM_OUT);
+        return NULL;
+    }
+
+    *newKey = *(int*)i;
+
+    return newKey;
 }
 
-void freeInt( void* i){}
+void freeInt( void* i){
+
+    if (i == NULL) {
+        reportError(INVALID_ARGUMENT);
+    }
+
+    free(i);
+}
 
 int intFcn (const void* key, size_t tableSize)
 {
-    return 0;
+    if (key == NULL) {
+        reportError(INVALID_ARGUMENT);
+        return 0;
+    }
+
+    int value = *(int*)key;
+
+    return (int) (value % tableSize);
 }
 
 void intPrint (const void* key)
@@ -18,6 +46,20 @@ void intPrint (const void* key)
 
 int intCompare(const void * key1, const void * key2)
 {
-    return 0;
+    if (key1 == NULL) {
+        if (key2 == NULL) {
+            return 0;
+        }
+        return 1;
+    }
+
+    if (key2 == NULL) {
+        return 1;
+    }
+
+    int value1 = *(int*)key1;
+    int value2 = *(int*)key2;
+
+    return value1 - value2;
 }
 
