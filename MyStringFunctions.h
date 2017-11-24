@@ -32,6 +32,6 @@ void strPrint (const void*  s);
  *   returns zero int if both strings are equal, otherwise
  *   returns non-zero.
  */
-/* TODO change here */ strCompare (/* TODO change here */);
+int strCompare(const void * key1, const void * key2);
 
 #endif // _MY_STR_FUNCTIONS_H_
