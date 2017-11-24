@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 project(GenericHashTable)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_STANDARD 99)
 
 set(SOURCE_FILES
         GenericHashTable.h
@@ -12,6 +12,6 @@ set(SOURCE_FILES
         MyIntFunctions.h
         MyStringFunctions.h
         TableErrorHandle.c
-        TableErrorHandle.h)
+        TableErrorHandle.h MyIntFunctions.c MyStringFunctions.c)
 
 add_executable(GenericHashTable ${SOURCE_FILES})

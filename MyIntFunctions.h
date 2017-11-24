@@ -33,6 +33,7 @@ void intPrint (const void* key);
  *   returns non-zero.
  * 
  */
-/* TODO change here */ intCompare (/* TODO change here */);
+
+int intCompare(const void * key1, const void * key2);
 
 #endif // _MY_INT_FUNCTIONS_H_

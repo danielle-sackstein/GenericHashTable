@@ -1,6 +1,7 @@
 #ifndef _MY_STR_FUNCTIONS_H_
 #define _MY_STR_FUNCTIONS_H_
 
+#include <stdlib.h>
 
 /**
  * @brief clone a string

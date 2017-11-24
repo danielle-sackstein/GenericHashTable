@@ -1,6 +1,7 @@
 #ifndef _MY_KEY_H_
 #define _MY_KEY_H_
 
+#include <stdlib.h>
 
 /**
  * @brief Allocate memory for an object which contain duplicatoin of the given key.
