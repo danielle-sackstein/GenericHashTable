@@ -1,0 +1,9 @@
+[0]	abcd,abcd	-->	bcde,bcde	-->	
+[1]	ijlm,ijlm	-->	jlmn,jlmn	-->	
+[2]	efgh,efgh	-->	fghi,fghi	-->	
+[3]	lmno,lmno	-->	
+[4]	cdef,cdef	-->	defg,defg	-->	
+[5]	
+[6]	ghij,ghij	-->	hijl,hijl	-->	
+[7]	
+lmno=lmno	3	0
