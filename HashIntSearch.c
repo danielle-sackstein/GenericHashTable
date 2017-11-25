@@ -11,8 +11,7 @@
 */
 int main(int argc, char *argv[]) 
 {
-
-    // (1) read table size and a key to find
+	// (1) read table size and a key to find
     if (argc < 3) 
     {
         fprintf(stderr, "Usage: GenericHashTable <table size> <key>\n");
@@ -60,10 +59,9 @@ int main(int argc, char *argv[])
     // (5) look for the key
     
     int arrCell;
-    int listNode;
-    
-    int *res=findData(table, &val, &arrCell, &listNode);
-    printf("%d=%d\t%d\t%d\n", *res,val, arrCell, listNode);
+
+    int *res=findData(table, &val, &arrCell);
+    printf("%d=%d\t%d\n", *res,val, arrCell);
 
 
     // (6) free the table

@@ -56,10 +56,9 @@ int main1(int argc, char *argv[])
     // (5) look for the key
     
     int arrCell;
-    int listNode;
-    
-    findData(table, val, &arrCell, &listNode);
-    printf("%s\t%d\t%d\n", val, arrCell, listNode);
+
+    findData(table, val, &arrCell);
+    printf("%s\t%d\n", val, arrCell);
     
     
     // (6) free the table

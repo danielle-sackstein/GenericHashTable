@@ -42,7 +42,7 @@ static void printKeyValue(const struct Table *table, size_t i);
 
 static void copyKeyValues(const struct Table *table, KeyValue *newKeyValues);
 
-static void checkTable(TableP table);
+//static void checkTable(TableP table);
 
 TableP createTable(
     size_t tableSize,
@@ -126,15 +126,15 @@ DataP removeData(TableP table, const void *key) {
     return 0;
 }
 
-DataP findData(const TableP table, const void *key, int *arrCell, int *listNode) {
+DataP findData(const TableP table, const void *key, int *arrCell) {
     return 0;
 }
 
-DataP getDataAt(const TableP table, int arrCell, int listNode) {
+DataP getDataAt(const TableP table, int arrCell) {
     return 0;
 }
 
-ConstKeyP getKeyAt(const TableP table, int arrCell, int listNode) {
+ConstKeyP getKeyAt(const TableP table, int arrCell) {
     return 0;
 }
 

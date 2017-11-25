@@ -10,7 +10,7 @@ typedef const void* ConstKeyP;
  * @brief print function
  * 
  */
- typedef void(*PrintDataFcn)(const void* data);
+typedef void(*PrintDataFcn)(const void* data);
 
 /**
  * @brief Allocate memory for a hash table with which uses the given functions.
@@ -20,8 +20,8 @@ typedef const void* ConstKeyP;
  */
 
 TableP createTable(size_t tableSize, CloneKeyFcn cloneKey, FreeKeyFcn freeKey
-					 		  ,HashFcn hfun,PrintKeyFcn printKeyFun, PrintDataFcn printDataFun
-					 		  , ComparisonFcn fcomp);
+		,HashFcn hfun,PrintKeyFcn printKeyFun, PrintDataFcn printDataFun
+		, ComparisonFcn fcomp);
 
 
 /**
@@ -46,41 +46,33 @@ DataP removeData(TableP table, const void* key);
 /**
  * @brief Search the table and look for an object with the given key.
  * If such object is found fill its cell number into arrCell (where 0 is the
- * first cell), and its placement in the list into listNode (when 0 is the
- * first node in the list, i.e. the node that is pointed from the table
- * itself).
+ * first cell).
  * If the key was not found, fill both pointers with value of -1.
  * return pointer to the data or null
  */
-DataP findData(const TableP table, const void* key, int* arrCell, int* listNode);
+DataP findData(const TableP table, const void* key, int* arrCell);
 
 
 
 
 /**
  * @brief return a pointer to the data that exist in the table in cell number arrCell (where 0 is the
- * first cell), and placment at listNode in the list (when 0 is the
- * first node in the list, i.e. the node that is pointed from the table
- * itself).
+ * first cell).
  * If such data not exist return NULL
  */
-DataP getDataAt(const TableP table, int arrCell, int listNode);
+DataP getDataAt(const TableP table, int arrCell);
 
 /**
  * @brief return the pointer to the key that exist in the table in cell number arrCell (where 0 is the
- * first cell), and placment at listNode in the list (when 0 is the
- * first node in the list, i.e. the node that is pointed from the table
- * itself).
+ * first cell).
  * If such key not exist return NULL
  */
-ConstKeyP getKeyAt(const TableP, int arrCell, int listNode);
+ConstKeyP getKeyAt(const TableP, int arrCell);
 
 /**
  * @brief Print the table (use the format presented in PrintTableExample).
  */
 void printTable(const TableP table);
-
-
 
 
 /**
