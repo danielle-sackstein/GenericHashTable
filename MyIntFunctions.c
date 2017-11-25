@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "MyIntFunctions.h"
 #include "TableErrorHandle.h"
 
@@ -42,6 +43,13 @@ int intFcn (const void* key, size_t tableSize)
 
 void intPrint (const void* key)
 {
+    if (key == NULL){
+        reportError(MEM_OUT);
+        return;
+    }
+    int value = *(int*)key;
+
+    printf("%d", value);
 }
 
 int intCompare(const void * key1, const void * key2)
