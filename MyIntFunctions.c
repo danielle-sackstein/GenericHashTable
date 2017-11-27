@@ -9,7 +9,7 @@ void *cloneInt(const void *i)
 {
 	if (i == NULL)
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return NULL;
 	}
 
@@ -33,7 +33,7 @@ void freeInt(void *i)
 
 	if (i == NULL)
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 	}
 
 	free(i);
@@ -48,7 +48,7 @@ int intFcn(const void *key, size_t tableSize)
 {
 	if (key == NULL)
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return 0;
 	}
 

@@ -31,7 +31,7 @@ void freeStr(void *s)
 {
 	if (s == NULL)
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return;
 	}
 
@@ -49,7 +49,7 @@ int strFcn(const void *s, size_t tableSize)
 {
 	if (s == NULL)
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return 0;
 	}
 
@@ -90,7 +90,7 @@ int strCompare(const void *key1, const void *key2)
 {
 	if (key1 == 0)
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return 0;
 	}
 

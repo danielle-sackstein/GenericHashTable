@@ -67,7 +67,7 @@ TableP createTable(
 		hfun == NULL || printKeyFun == NULL ||
 		printDataFun == NULL || fcomp == NULL)
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return 0;
 	}
 
@@ -112,7 +112,7 @@ int insert(const TableP table, const void *key, DataP object)
 {
 	if (table == NULL || key == NULL || object == NULL)
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return 0;
 	}
 
@@ -184,7 +184,7 @@ DataP findData(const TableP table, const void *key, int *arrCell)
 {
 	if (table == NULL || key == NULL || arrCell == NULL)
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return NULL;
 	}
 
@@ -217,7 +217,7 @@ DataP getDataAt(const TableP table, int arrCell)
 {
 	if (table == NULL || !isInRange(table, arrCell))
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return NULL;
 	}
 	return table->keyValues[arrCell].value;
@@ -232,7 +232,7 @@ ConstKeyP getKeyAt(const TableP table, int arrCell)
 {
 	if (table == NULL || !isInRange(table, arrCell))
 	{
-		reportError(INVALID_ARGUMENT);
+		reportError(GENERAL_ERROR);
 		return NULL;
 	}
 	return table->keyValues[arrCell].key;
@@ -241,36 +241,18 @@ ConstKeyP getKeyAt(const TableP table, int arrCell)
 /**
  * @brief Print the table (use the format presented in PrintTableExample).
  */
-void printTable1(const TableP table)
-{
-	for (size_t hash = 0; hash < table->tableSize; hash++)
-	{
-		printf("[%d]\t", (int) hash);
-
-		size_t hashStart = hash*table->growthFactor;
-
-		for (size_t i = 0; i < table->growthFactor; i++)
-		{
-			printKeyValue(table, hashStart + i);
-		}
-
-		printf("\n");
-	}
-}
-
 void printTable(const TableP table)
 {
 	for (size_t hash = 0; hash < table->tableSize; hash++)
 	{
 		size_t hashStart = hash*table->growthFactor;
 
-		for (size_t i = 0; i < table->tableSize * table->growthFactor; i++)
+		for (size_t i = 0; i < table->growthFactor; i++)
 		{
-			printf("[%zu]\t", i);
-			printKeyValue(table, hashStart + i);
+			int cellNum = (int)(hashStart + i);
+			printf("[%d]\t", cellNum);
+			printKeyValue(table, cellNum);
 		}
-
-		printf("\n");
 	}
 }
 
@@ -424,10 +406,10 @@ static void printKeyValue(const struct Table *table, size_t i)
 		table->printKeyFun(keyValue->key);
 		printf(",");
 		table->printDataFun(keyValue->value);
-//		printf("-->");
 		printf("\t");
 	}
 	printf("\n");
+
 }
 
 /**
