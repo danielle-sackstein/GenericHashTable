@@ -21,6 +21,7 @@ void freeStr(void* s);
 
  */
 int strFcn (const void*  s, size_t tableSize);
+
 /**
  * @brief print a string
  *  assuming key pointer to string

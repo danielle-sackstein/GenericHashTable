@@ -5,6 +5,9 @@
 
 static int getStringSum(const void *s);
 
+/**
+ * @brief clone a string
+ */
 void *cloneStr(const void *s)
 {
 	char *clone = (char *) malloc(sizeof(char) * strlen(s) + 1);
@@ -21,6 +24,9 @@ void *cloneStr(const void *s)
 	return clone;
 }
 
+/**
+ * @brief free a string
+ */
 void freeStr(void *s)
 {
 	if (s == NULL)
@@ -33,6 +39,12 @@ void freeStr(void *s)
 }
 
 
+/**
+ * @brief hash value of key for HashTable with size tableSize
+ *  assuming key pointer to string
+ * @return number between 0-(tableSize-1)
+
+ */
 int strFcn(const void *s, size_t tableSize)
 {
 	if (s == NULL)
@@ -46,11 +58,17 @@ int strFcn(const void *s, size_t tableSize)
 
 	if (mod < 0)
 	{
-		return tableSize + mod;
+		return (int) tableSize + mod;
 	}
 	return mod;
 }
 
+
+/**
+ * @brief print a string
+ *  assuming key pointer to string
+ *
+ */
 void strPrint(const void *s)
 {
 	if (s == NULL)
@@ -62,6 +80,12 @@ void strPrint(const void *s)
 	printf("%s", (char*)s);
 }
 
+/**
+ *  strCompare - pointer to int comparison function:
+ * @brief compare 2 strings
+ *   returns zero int if both strings are equal, otherwise
+ *   returns non-zero.
+ */
 int strCompare(const void *key1, const void *key2)
 {
 	if (key1 == 0)
@@ -91,6 +115,11 @@ int strCompare(const void *key1, const void *key2)
 	return 1;
 }
 
+/**
+ * gets the ascii value of the string
+ * @param s a pointer to the string
+ * @return return the ascii value of the string
+ */
 static int getStringSum (const void *s)
 {
 	char *ptr = (char *) s;

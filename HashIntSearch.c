@@ -9,7 +9,7 @@
 /**
 * main
 */
-int main(int argc, char *argv[]) 
+int main5(int argc, char *argv[])
 {
 	// (1) read table size and a key to find
     if (argc < 3) 

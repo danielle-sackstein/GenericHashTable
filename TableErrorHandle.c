@@ -14,6 +14,9 @@ void reportError(TableErrors tableError)
 		case MEM_OUT:
 			fprintf(stderr, "ERROR: Out Of Memory\n");
 			return;
+		case INVALID_ARGUMENT:
+			fprintf(stderr, "ERROR: Invalid argument\n");
+			return;
 		default:
 			fprintf(stderr, "ERROR: General error.\n");
 			return;

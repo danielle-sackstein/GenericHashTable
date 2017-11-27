@@ -1,20 +1,39 @@
-[0]	ghij,ghij	-->	
-[1]	lmno,lmno	-->	
-[2]	
-[3]	cdef,cdef	-->	
+[0]	ghij,ghij	
+[1]	
+[2]	lmno,lmno	
+[3]	
 [4]	
-[5]	hijl,hijl	-->	
-[6]	
-[7]	defg,defg	-->	
+[5]	
+[6]	cdef,cdef	
+[7]	
 [8]	
 [9]	
-[10]	ijlm,ijlm	-->	
-[11]	efgh,efgh	-->	
+[10]	hijl,hijl	
+[11]	
 [12]	
 [13]	
-[14]	abcd,abcd	-->	
-[15]	fghi,fghi	-->	jlmn,jlmn	-->	
-[16]	
+[14]	defg,defg	
+[15]	
+[16]	jlmn,jlmn	
 [17]	
-[18]	bcde,bcde	-->	
-abcd=abcd	14	0
+[18]	
+[19]	
+[20]	ijlm,ijlm	
+[21]	
+[22]	efgh,efgh	
+[23]	
+[24]	
+[25]	
+[26]	
+[27]	
+[28]	abcd,abcd	
+[29]	
+[30]	fghi,fghi	
+[31]	
+[32]	
+[33]	
+[34]	
+[35]	
+[36]	bcde,bcde	
+[37]	
+abcd	28	

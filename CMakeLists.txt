@@ -12,6 +12,7 @@ set(SOURCE_FILES
         MyIntFunctions.h
         MyStringFunctions.h
         TableErrorHandle.c
-        TableErrorHandle.h MyIntFunctions.c MyStringFunctions.c)
+        TableErrorHandle.h MyIntFunctions.c MyStringFunctions.c myIntTests.c myStringTests.c
+        myStringTests.c)
 
 add_executable(GenericHashTable ${SOURCE_FILES})
