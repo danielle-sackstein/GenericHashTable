@@ -7,7 +7,7 @@
 #define STR "abcdefghijlmnop"
 #define DATA_SIZE (15-4)
 
-int main1(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     // (1) read table size and a key to find
     if (argc < 3) 
